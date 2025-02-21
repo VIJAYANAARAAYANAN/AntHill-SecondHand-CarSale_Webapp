@@ -1,0 +1,264 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 105vh;
+  background: url("../assets/CarHomebanner.svg") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.background-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  width: 88%;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 65px;
+}
+
+.left-content {
+  width: 50%;
+}
+
+.left-content h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "ClashDisplay", sans-serif;
+  font-weight: 600;
+  line-height: 67.8px;
+}
+
+.left-content p {
+  font-size: 20px;
+  font-family: "ClashDisplay", sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.book-btn {
+  background: red;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  color: white;
+  font-family: "ClashGrotesk", sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.button-rating {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rating {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: "ClashDisplay", sans-serif;
+}
+
+.right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.car-filter {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+.tabs {
+  display: flex;
+  background: #f2f2f2;
+  justify-content: space-around;
+  padding: 5px;
+  border-radius: 40px;
+  margin-bottom: 36px;
+}
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  font-family: "ClashGrotesk", sans-serif;
+  background: transparent;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.tabs .active {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 100%;
+  margin-bottom: 15px;
+  border: none;
+  padding: 16px 12px;
+  font-family: "ClashGrotesk", sans-serif;
+  font-size: 15px;
+  color: black;
+  background: #f6f6f6;
+  font-size: 20px;
+  box-sizing: border-box;
+  font-weight: 300;
+}
+.input-field::placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "ClashGrotesk", sans-serif;
+}
+.dual-range-slider {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 0px 0 30px 0px;
+}
+
+.slider-track {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.slider-range {
+  position: absolute;
+  height: 4px;
+  background: #dc3545;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.thumb-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.thumb {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 46%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+}
+
+.thumb::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #dc3545;
+  cursor: pointer;
+  border: none;
+}
+
+.thumb::-moz-range-thumb {
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #dc3545;
+  cursor: pointer;
+  border: none;
+}
+
+.thumb-left {
+  z-index: 3;
+  left: -3px;
+}
+
+.thumb-right {
+  z-index: 4;
+}
+
+.thumb-value {
+  position: absolute;
+  top: 70%;
+  font-family: "ClashGrotesk", sans-serif;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #000;
+  white-space: nowrap;
+}
+.search-btn {
+  width: 100%;
+  padding: 20px 15px;
+  background: #d93d3d;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "ClashGrotesk", sans-serif;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Welcome-text {
+  display: flex;
+  justify-content: start;
+  width: 85%;
+}
+.Welcome-text p{
+  font-family: "ClashDisplay", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+
+  .right-content {
+    margin-top: 20px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
