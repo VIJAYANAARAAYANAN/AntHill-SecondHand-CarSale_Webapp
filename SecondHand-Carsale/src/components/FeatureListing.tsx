@@ -5,6 +5,8 @@ import { ArrowRight } from "lucide-react";
 import automation from "../assets/icons/cog-outline.svg";
 import "./css/FeatureListing.css";
 import heart from "../assets/icons/heart.svg";
+import cars from '../assets/images/cars.svg';
+import redcar from "../assets/images/Redcar.svg";
 interface CarListing {
   id: number;
   title: string;
@@ -177,6 +179,41 @@ function App() {
 
         <div className="load-more">
           <button className="load-more-button">Load more</button>
+        </div>
+        
+        <div className="inventory-section">
+          <div className="inventory-cards">
+            <div className="inventory-card">
+              <div className="inventory-content">
+                <div className="inventory-label">CAR INVENTORY</div>
+                <h2 className="inventory-title">Search Over 13000+ Used Vehicles</h2>
+                <button className="inventory-button">
+                  View Inventory
+                  <ArrowRight className="arrow-icon" />
+                </button>
+              </div>
+              <img 
+                src={redcar}
+                alt="Red SUV" 
+                className="inventory-image"
+              />
+            </div>
+            <div className="inventory-card">
+              <div className="inventory-content">
+                <div className="inventory-label">CAR INVENTORY</div>
+                <h2 className="inventory-title">Looking to sell your Used brand car?</h2>
+                <button className="inventory-button">
+                  View Inventory
+                  <ArrowRight className="arrow-icon" />
+                </button>
+              </div>
+              <img 
+                src={cars} 
+                alt="Multiple Cars" 
+                className="inventory-image multiple-cars"
+              />
+            </div>
+          </div>
         </div>
       </main>
     </div>

@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -32,7 +32,7 @@ const Navbar = () => {
               to="/about"
               className={location.pathname === "/about" ? "active-link" : ""}
             >
-              About
+              About Us
             </Link>
           </li>
           <li>
