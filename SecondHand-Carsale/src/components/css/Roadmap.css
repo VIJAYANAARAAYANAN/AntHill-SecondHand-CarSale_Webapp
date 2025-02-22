@@ -1,0 +1,134 @@
+.roadmap-section {
+  padding: 4rem 2rem;
+  background-color: rgb(249 250 251);
+}
+
+.roadmap-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.roadmap-header {
+  margin-bottom: 3rem;
+}
+
+.red-accent {
+  width: 4px;
+  height: 24px;
+  background-color: rgb(239 68 68);
+  margin-bottom: 1rem;
+}
+
+.roadmap-header h2 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "ClashDisplay", sans-serif;
+  border-left: 8px solid #dc3545;
+  padding-left: 10px;
+  font-weight: 700;
+  color: rgb(17 24 39);
+}
+
+.subtitle {
+  color: #1d1e1c;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "ClashGrotesk", sans-serif;
+  width: 80%;
+  line-height: 2.4ch;
+  padding-left: 24px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgb(229 231 235);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  text-align: left;
+  color: rgb(17 24 39);
+  font-weight: 600;
+  font-family: "ClashDisplay", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+    cursor: pointer;
+}
+
+.faq-question span {
+  font-size: 1.125rem;
+  padding-right: 2rem;
+}
+
+.icon {
+  width: 1.5rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.open .icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+.answer-content {
+  padding-bottom: 1.5rem;
+  color: #1d1e1c;
+  font-family: "ClashDisplay", sans-serif;
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .roadmap-header h2 {
+    font-size: 3rem;
+  }
+
+  .faq-question span {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .roadmap-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .roadmap-header {
+    position: sticky;
+    top: 2rem;
+    margin-bottom: 0;
+  }
+}
