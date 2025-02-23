@@ -16,8 +16,8 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-.form{
-    padding-left: 24px;
+.form {
+  padding-left: 24px;
 }
 .form-section {
   display: flex;
@@ -50,7 +50,6 @@
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -58,48 +57,53 @@
 @media (min-width: 640px) {
   .form-row {
     width: 100%;
-    grid-template-columns: 1fr 1fr;
   }
 }
+.form-wrapper {
+  width: 100%;
+}
+.form-wrapper .inputget,
+.form-wrapper .textareaget {
+  padding-left: 25px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: none;
+  padding: 16px 12px;
+  font-family: "ClashGrotesk", sans-serif;
+  font-size: 16px;
+  color: black;
+  background: #f6f6f6;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid #d7d7d7;
+  font-weight: 300;
+}
 
-input,textarea{
-    padding-left: 25px;
-    width: 100%;
-    margin-bottom: 15px;
-    border: none;
-    padding: 16px 12px;
-    font-family: "ClashGrotesk", sans-serif;
-    font-size: 16px;
-    color: black;
-    background: #f6f6f6;
-    box-sizing: border-box;
-    border-radius: 15px;
-    border: 1px solid #D7D7D7;
-    font-weight: 300;
+.form-wrapper .inputget::placeholder,
+.form-wrapper .textareaget::placeholder {
+  font-family: "ClashGrotesk", sans-serif;
 }
-input,textarea::placeholder{
-    font-family: "ClashGrotesk",sans-serif;
-}
-input:focus,
-textarea:focus {
+
+.form-wrapper .inputget:focus,
+.form-wrapper .textareaget:focus {
   outline: none;
   border-color: rgb(239 68 68);
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-textarea {
+.form-wrapper .textareaget {
   height: 150px;
   resize: vertical;
   margin-bottom: 1.5rem;
 }
 
 .submit-button {
-  background-color: #D01818;
+  background-color: #d01818;
   color: white;
   font-size: 15px;
   font-weight: 500;
   border-radius: 10px;
-  font-family: "ClashGrotesk",sans-serif;
+  font-family: "ClashGrotesk", sans-serif;
   transition: background-color 0.2s;
   cursor: pointer;
   padding: 10px 20px;

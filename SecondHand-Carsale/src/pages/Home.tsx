@@ -5,6 +5,7 @@ import FeatureListing from "../components/FeatureListing.tsx";
 import Explore from "../components/Explore.tsx";
 import GetInTouch from "../components/GetinTouch.tsx";
 import Roadmap from "../components/RoadMap.tsx";
+import Contact from "../components/Contact.tsx";
 import Latest from "../components/Latest.tsx";
 const Home = () => {
   const [minValue, setMinValue] = useState(1000);
@@ -117,6 +118,7 @@ const Home = () => {
       <GetInTouch />
       <Roadmap/>
       <Latest/>
+      <Contact/>
     </>
   );
 };

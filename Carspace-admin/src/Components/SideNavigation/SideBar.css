@@ -1,0 +1,58 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+  }
+  
+  .logo-container {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .logo {
+    color: #ef4444;
+    font-size: 42px;
+    margin: 0;
+    font-weight: 600;
+    font-family: "AdineuePRO",sans-serif;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .nav-item {
+    display: flex;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: black; /* Default text color */
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.nav-icon {
+    color: black; /* Default icon color */
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f3f4f6;
+}
+
+.nav-item.active {
+    background-color: #177BE5;
+    color: white; /* Text turns white when active */
+}
+
+.nav-item.active .nav-icon {
+    color: white; /* Icon turns white when active */
+}

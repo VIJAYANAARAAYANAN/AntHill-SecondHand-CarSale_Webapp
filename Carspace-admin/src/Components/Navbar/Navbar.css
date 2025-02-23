@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 282px;
+  right: 0;
+  height: 100px;
+  background-color: #e5efff;
+  z-index: 10;
+  transition: background-color 0.1s ease-in-out;
+}
+.navbar.scrolled {
+  background-color: white;
+}
+.navbar-content {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Poppins";
+  color: #111827;
+}
+
+.navbar-title p {
+  color: #000;
+  margin: 0;
+  font-family: "Poppins";
+  font-size: 0.875rem;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-btn {
+  background: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 7px;
+  border-radius: 20%;
+}
+
+.notification-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.user-profile {
+  display: flex;
+  padding: 7px 5px;
+  align-items: center;
+  gap: 0.75rem;
+}
+.admin-profile {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* gap: 70px;
+  border: 1px solid #d8d8d8; */
+  padding: 0 10px;
+  border-radius: 10px;
+}
+.logout-btn{
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: "Poppins";
+    border-radius: 10px;
+    font-weight: 500;
+    border: none;
+    color: white;
+    background-color: crimson;
+}
+.user-profile P {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Poppins";
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  object-fit: cover;
+}

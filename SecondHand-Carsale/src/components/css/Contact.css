@@ -1,0 +1,204 @@
+.contact-footer {
+    background-color: #0066FF;
+    color: white;
+    padding: 4rem 3rem 2rem;
+  }
+  
+  .footer-container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  
+  .footer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid white;
+    margin-bottom: 2.5rem;
+    padding-bottom: 30px;
+  }
+  
+  .footer-header h2 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 600;
+    font-family: "CLashDisplay",sans-serif;
+    line-height: 1.2;
+  }
+  
+  .sell-button {
+    background-color: #D01818;
+    color: white;
+    font-family: "CLashDisplay",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .sell-button:hover {
+    background-color: #B91C1C;
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 7px;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-links {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .link-area{
+    display: flex;
+    gap: 6rem;
+  }
+  .links-column h3 {
+    color: #999999;
+    margin-top: 0;
+    font-family: "ClashDisplay",sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .links-column ul li {
+    margin-bottom: 1rem;
+  }
+  
+  .links-column ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "ClashGrotest",sans-serif;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  
+  .links-column ul li a:hover {
+    opacity: 0.8;
+  }
+  
+  .contact-info {
+    display: flex;
+    border-radius: 10px;
+    padding: 50px 50px;
+    background-color: white;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: fit-content;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .info-item .icon {
+    font-size: 1.25rem;
+  }
+  
+  .info-item p,
+  .info-item a {
+    color: black;
+    font-weight: 600;
+    font-family: "ClashGrotesk",sans-serif;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .info-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  .legal-links {
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .legal-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "ClashGrotesk",sans-serif;
+    transition: opacity 0.2s;
+  }
+  
+  .legal-links a:hover {
+    opacity: 0.8;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 0;
+    transition: background-color 0.2s;
+  }
+  
+  .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .social-link::before {
+    font-size: 1.25rem;
+  }
+  
+  .social-link.facebook::before {
+    content: "📘";
+  }
+  
+  .social-link.linkedin::before {
+    content: "📱";
+  }
+  
+  .social-link.twitter::before {
+    content: "🐦";
+  }
+  
+  .social-link.youtube::before {
+    content: "📺";
+  }
