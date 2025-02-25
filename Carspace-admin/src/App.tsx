@@ -5,6 +5,7 @@ import Dashboard from "./Pages/Dashboard";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import ManageListing from "./Pages/Listings";
+import AddCar from "./Pages/AddCar";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/listings" element={<ManageListing/>} />
+              <Route path="/addcars" element={<AddCar/>} />
             </Routes>
           </div>
         </div>

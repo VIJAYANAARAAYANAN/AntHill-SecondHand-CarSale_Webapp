@@ -9,7 +9,7 @@
 .listings-header {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .listings-header h1 {

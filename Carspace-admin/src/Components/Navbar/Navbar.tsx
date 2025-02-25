@@ -57,6 +57,7 @@ const Navbar = () => {
     "/listings": "Manage Listing",
     "/bookings": "Bookings",
     "/faqs": "FAQs",
+    "/addcars" :"Add Car Details",
     "/blogs": "Blogs",
   };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
 import "../PagesCss/ManageListing.css";
+import {useNavigate } from "react-router-dom";
 
 interface PriceRange {
   min: number;
@@ -8,6 +9,7 @@ interface PriceRange {
 }
 
 const Listings = () => {
+  const navigate  = useNavigate();
   const [minValue, setMinValue] = useState(1000);
   const [maxValue, setMaxValue] = useState(5000);
   const [activeTab, setActiveTab] = useState("New cars");
@@ -60,11 +62,14 @@ const Listings = () => {
       filters,
     });
   };
+  const handleaddcars = () => {
+    navigate('/addcars');
+  }
 
   return (
     <div className="listings">
       <div className="listings-header">
-        <button className="add-car-btn">Add Car</button>
+        <button className="add-car-btn" onClick={handleaddcars}>Add Car</button>
       </div>
 
       <div className="listings-content">

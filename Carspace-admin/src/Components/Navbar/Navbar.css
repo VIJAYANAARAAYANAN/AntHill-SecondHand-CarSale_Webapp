@@ -10,7 +10,9 @@
 }
 .navbar.scrolled {
   background-color: white;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.2);
 }
+
 .navbar-content {
   padding: 1rem 2rem;
   display: flex;
@@ -66,15 +68,15 @@
   padding: 0 10px;
   border-radius: 10px;
 }
-.logout-btn{
-    padding: 5px 10px;
-    font-size: 15px;
-    font-family: "Poppins";
-    border-radius: 10px;
-    font-weight: 500;
-    border: none;
-    color: white;
-    background-color: crimson;
+.logout-btn {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  background-color: crimson;
 }
 .user-profile P {
   font-size: 16px;
