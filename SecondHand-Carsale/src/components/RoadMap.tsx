@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import './css/roadmap.css';
+import './css/Roadmap.css';
 
 interface FAQItem {
   question: string;
