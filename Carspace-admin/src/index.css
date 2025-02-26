@@ -6,7 +6,6 @@ body {
   background-color: #e5efff;
 }
 
-/* Clash Display Font */
 @font-face {
   font-family: 'ClashDisplay';
   src: url('./assets/fonts/ClashDisplay-Regular.otf') format('opentype');

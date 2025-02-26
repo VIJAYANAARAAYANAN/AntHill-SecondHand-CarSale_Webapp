@@ -33,14 +33,14 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-    color: black; /* Default text color */
+    color: black; 
     text-decoration: none;
     border-radius: 0.5rem;
     transition: all 0.2s;
 }
 
 .nav-icon {
-    color: black; /* Default icon color */
+    color: black;
     transition: all 0.2s;
 }
 
@@ -50,9 +50,9 @@
 
 .nav-item.active {
     background-color: #177BE5;
-    color: white; /* Text turns white when active */
+    color: white; 
 }
 
 .nav-item.active .nav-icon {
-    color: white; /* Icon turns white when active */
+    color: white;
 }

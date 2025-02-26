@@ -193,12 +193,12 @@ textarea.input-field {
 }
 
 .checkbox-label input:checked {
-  background-color: #ff0000; /* Background when checked */
+  background-color: #ff0000;
   border-color: #ff0000;
 }
 
 .checkbox-label input:checked::after {
-  content: "✔"; /* Unicode tick mark */
+  content: "✔"; 
   color: white;
   font-size: 14px;
   font-weight: bold;

@@ -23,7 +23,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to handle login success
   const handleLoginSuccess = (credentialResponse) => {
     if (credentialResponse?.credential) {
       try {
@@ -41,15 +40,12 @@ const Navbar = () => {
       }
     }
   };
-
-  // Function to handle logout
   const handleLogout = () => {
     googleLogout();
     localStorage.removeItem("user");
     setUser(null);
   };
 
-  // **Dynamic Title Mapping**
   const titleMap: { [key: string]: string } = {
     "/": "Dashboard",
     "/users": "Users",
@@ -61,7 +57,6 @@ const Navbar = () => {
     "/blogs": "Blogs",
   };
 
-  // Get the dynamic title based on the route
   const currentTitle = titleMap[location.pathname] || "Dashboard";
 
   return (
@@ -69,7 +64,6 @@ const Navbar = () => {
       <div className="navbar-content">
         <div className="navbar-title">
           <h1>{currentTitle}</h1>
-          {/* Show different text based on the page */}
           <p>{currentTitle === "Dashboard" ? "Welcome Carspace Admin!" : `List of ${currentTitle}`}</p>
         </div>
         <div className="navbar-actions">

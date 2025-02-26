@@ -55,7 +55,6 @@ const Listings = () => {
   };
 
   const handleSearch = () => {
-    // Implement search functionality
     console.log("Searching with filters:", {
       selectedType,
       priceRange,

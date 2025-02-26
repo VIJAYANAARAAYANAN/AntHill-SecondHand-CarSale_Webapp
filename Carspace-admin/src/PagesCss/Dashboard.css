@@ -187,13 +187,13 @@
 }
 
 .bookings-chart {
-  background-color: #ffffff; /* White background */
-  border-radius: 10px; /* Smooth rounded corners */
+  background-color: #ffffff; 
+  border-radius: 10px; 
   width: fit-content;
 }
 
 .recharts-cartesian-grid-horizontal line {
-  stroke: #e0e0e0; /* Light grey grid lines */
+  stroke: #e0e0e0;
   stroke-width: 1;
 }
 

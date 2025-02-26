@@ -70,7 +70,6 @@ const AddCar = () => {
     image: null,
   });
 
-  // Handle text inputs
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -81,7 +80,6 @@ const AddCar = () => {
     }));
   };
 
-  // Handle feature checkbox selection
   const handleFeatureChange = (feature: string) => {
     setFormData((prev) => {
       const updatedFeatures = prev.features.includes(feature)
@@ -91,7 +89,6 @@ const AddCar = () => {
     });
   };
 
-  // Handle image upload
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -149,13 +146,10 @@ const AddCar = () => {
       
     }
 
-    // Create new car listing object
     const newListing = {
       ...formData,
       image: imageUrl,
     };
-
-    // Fetch the existing user's listingData
     let { data, error } = await supabase
       .from("CarSpace_ManageListing")
       .select("listingData")
@@ -166,13 +160,12 @@ const AddCar = () => {
       ? [...data.listingData, newListing]
       : [newListing];
 
-    // Insert or update listingData in Supabase
     const { error: upsertError } = await supabase
       .from("CarSpace_ManageListing")
       .upsert([
         {
           userEmail: userEmail,
-          listingData: updatedListings, // Store updated JSONB array
+          listingData: updatedListings, 
         },
       ]);
 
@@ -184,8 +177,6 @@ const AddCar = () => {
       handleClear();
     }
   };
-
-  // Clear form data
   const handleClear = () => {
     setFormData({
       carName: "",
@@ -411,7 +402,6 @@ const AddCar = () => {
           </div>
 
           {/* Media Upload */}
-          {/* Media Upload */}
           <div className="form-group">
             <label>Media Upload</label>
             <div
@@ -430,7 +420,6 @@ const AddCar = () => {
               />
             </div>
 
-            {/* Display uploaded image preview */}
             {formData.image && (
               <div className="image-preview">
                 <p>Selected Image:</p>
