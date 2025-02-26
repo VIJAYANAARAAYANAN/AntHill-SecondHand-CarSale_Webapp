@@ -1,5 +1,4 @@
 import "../PageCss/Home.css";
-import backgroundImage from "../assets/CarHomebanner.svg";
 import React, { useState } from "react";
 import FeatureListing from "../components/FeatureListing.tsx";
 import Explore from "../components/Explore.tsx";

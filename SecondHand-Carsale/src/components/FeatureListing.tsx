@@ -1,4 +1,3 @@
-import React from "react";
 import petrol from "../assets/icons/Vector.svg";
 import speed from "../assets/icons/gauge.svg";
 import { ArrowRight } from "lucide-react";
