@@ -1,6 +1,6 @@
-import Bus from "../models/Bus.js";
-import Route from "../models/Route.js";
-import Booking from "../models/Booking.js";
+import Bus from "../models/BusModal.js";
+import Route from "../models/RouteModal.js";
+import Booking from "../models/BookingModal.js";
 import mongoose from "mongoose";
 
 export const searchBuses = async (req, res) => {

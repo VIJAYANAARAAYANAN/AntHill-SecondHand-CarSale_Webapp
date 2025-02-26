@@ -1,5 +1,5 @@
-import Bus from "../models/Bus.js";
-import Route from "../models/Route.js";
+import Bus from "../models/BusModal.js";
+import Route from "../models/RouteModal.js";
 
 export const addBus = async (req, res) => {
   try {

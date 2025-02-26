@@ -1,7 +1,7 @@
 import express from "express";
 import { registerUser} from "../controllers/authController.js";
 
-import { verifyToken, verifyAdmin } from "../middleware/authMiddleware.js";
+import { verifyToken, verifyAdmin } from "../middleware/middlewareAuth.js";
 import {
   addBus,
   updateBus,
