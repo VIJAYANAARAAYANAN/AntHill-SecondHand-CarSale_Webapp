@@ -1,8 +1,6 @@
 import React from "react";
 import "./css/Latest.css";
 import { Link } from "react-router-dom";
-
-// Import images
 import usedCarsImage from "../assets/images/latest.svg";
 import carKeysImage from "../assets/images/latnews.svg";
 import newCarsImage from "../assets/images/news.svg";

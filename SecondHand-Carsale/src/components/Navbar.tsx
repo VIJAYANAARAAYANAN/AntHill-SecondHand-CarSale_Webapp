@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
+import { Link, useLocation } from "react-router-dom";
 import "./css/Navbar.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // Get the current path
-
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);

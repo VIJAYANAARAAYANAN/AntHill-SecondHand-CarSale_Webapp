@@ -44,14 +44,11 @@ const Explore = () => {
     const handleScroll = () => {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
 
-      // When we reach the end, jump back to start
-      if (scrollLeft + clientWidth >= scrollWidth - 10) {
+      if (scrollLeft+clientWidth>=scrollWidth - 10) {
         scrollContainer.scrollLeft = 0;
       }
-
-      // When we scroll back past the start, jump to end
       if (scrollLeft <= 0) {
-        scrollContainer.scrollLeft = scrollWidth - clientWidth;
+        scrollContainer.scrollLeft=scrollWidth-clientWidth;
       }
     };
 
@@ -71,7 +68,6 @@ const Explore = () => {
 
       <div className="scroll-container" ref={scrollContainerRef}>
         <div className="car-categories">
-          {/* Original set */}
           {carCategories.map((car, index) => (
             <div key={`original-${index}`} className="category-card">
               <div className="category-image">
@@ -81,7 +77,6 @@ const Explore = () => {
             </div>
           ))}
 
-          {/* Duplicate set for seamless scrolling */}
           {carCategories.map((car, index) => (
             <div key={`duplicate-${index}`} className="category-card">
               <div className="category-image">

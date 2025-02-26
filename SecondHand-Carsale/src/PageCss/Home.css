@@ -199,7 +199,6 @@
 .thumb-right {
   z-index: 4;
 }
-/* Hello change has been made to check here*/
 .thumb-value {
   position: absolute;
   top: 70%;
@@ -239,7 +238,6 @@
   margin-top: 15px;
   padding-left: 20px;
 }
-/* Responsive */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
