@@ -13,8 +13,6 @@ router.post("/register", async (req, res) => {
     verifyToken(req, res, () => verifyAdmin(req, res, () => registerUser(req, res)));
   }
 });
-
-// Login route
 router.post("/login", loginUser);
 
 

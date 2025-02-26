@@ -1,19 +1,15 @@
-// controllers/adminController.js
 import Bus from "../models/Bus.js";
 import Route from "../models/Route.js";
 
-// Add a new bus
 export const addBus = async (req, res) => {
   try {
     const { busNumber, busName, capacity, type, route } = req.body;
 
-    // Check for existing busNumber
     const existingBus = await Bus.findOne({ busNumber });
     if (existingBus) {
       return res.status(400).json({ message: "Bus with this number already exists" });
     }
 
-    // Create new bus
     const newBus = new Bus({ busNumber, busName, capacity, type, route });
     await newBus.save();
 
@@ -23,7 +19,6 @@ export const addBus = async (req, res) => {
   }
 };
 
-// Update bus details
 export const updateBus = async (req, res) => {
   try {
     const busId = req.params.id;
@@ -41,12 +36,10 @@ export const updateBus = async (req, res) => {
   }
 };
 
-// Add a new route
 export const addRoute = async (req, res) => {
   try {
     const { source, destination, distance, departureTime, arrivalTime } = req.body;
 
-    // Create new route
     const newRoute = new Route({ source, destination, distance, departureTime, arrivalTime });
     await newRoute.save();
 
@@ -56,7 +49,6 @@ export const addRoute = async (req, res) => {
   }
 };
 
-// Update route details
 export const updateRoute = async (req, res) => {
   try {
     const routeId = req.params.id;

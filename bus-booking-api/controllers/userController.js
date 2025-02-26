@@ -1,10 +1,8 @@
-// controllers/userController.js
 import Bus from "../models/Bus.js";
 import Route from "../models/Route.js";
 import Booking from "../models/Booking.js";
 import mongoose from "mongoose";
 
-// Search for buses based on route
 export const searchBuses = async (req, res) => {
   const { source, destination } = req.query;
   if (!source || !destination) {
@@ -14,13 +12,11 @@ export const searchBuses = async (req, res) => {
   }
 
   try {
-    // Find matching routes
     const routes = await Route.find({ source, destination });
     if (!routes.length) {
       return res.status(404).json({ message: "No routes found" });
     }
 
-    // Find buses on the matching routes
     const buses = await Bus.find({
       route: { $in: routes.map((r) => r._id) },
     }).populate("route");
@@ -30,33 +26,24 @@ export const searchBuses = async (req, res) => {
   }
 };
 
-// Book a bus
 export const bookBus = async (req, res) => {
-  const { busId, seats } = req.body;
-  const userId = req.user.id; // Ensure token middleware extracts this
-
+  const { busId,seats } = req.body;
+  const userId = req.user.id;
   try {
-    // Validate seats input
     if (!seats || seats <= 0) {
-      return res.status(400).json({ message: "Invalid seat count" });
+      return res.status(400).json({message:"Invalid seat count"});
     }
 
-    // Check if bus exists
     const bus = await Bus.findById(busId);
     if (!bus) {
       return res.status(404).json({ message: "Bus not found" });
     }
-
-    // Check for available seats
     if (bus.capacity < seats) {
       return res.status(400).json({ message: "Not enough seats available" });
     }
-
-    // Update bus capacity
     bus.capacity -= seats;
     await bus.save();
 
-    // Create booking
     const booking = await Booking.create({
       user: userId,
       bus: busId,
