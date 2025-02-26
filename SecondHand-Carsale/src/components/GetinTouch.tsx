@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/getintouch.css";
+import "./css/GetinTouch.css";
 
 const GetInTouch = () => {
   const [formData, setFormData] = useState({
